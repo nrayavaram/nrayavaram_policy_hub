@@ -19,12 +19,12 @@ policy "enforce-mandatory-labels" {
     enforcement_level = "advisory"
 }
     
-policy "enforce-mandatory-labels" {
+policy "network_gcp_port_restriction" {
     source = "./network_gcp_port_restriction.sentinel"
     enforcement_level = "advisory"
 }
     
-policy "enforce-mandatory-labels" {
+policy "encryption_gcp_cmek_enforce" {
     source = "./storage_gcp_versioning_enforce.sentinel"
     enforcement_level = "advisory"
 }
@@ -39,55 +39,55 @@ policy "enforce-mandatory-labels" {
     enforcement_level = "advisory"
 }
     
-policy "enforce-mandatory-labels" {
+policy "tagging_gcp_validation" {
     source = "./tagging_gcp_validation.sentinel"
     enforcement_level = "advisory"
 }
     
-policy "enforce-mandatory-labels" {
+policy "appsec_gcp_serviceaccount_restriction" {
     source = "./appsec_gcp_serviceaccount_restriction.sentinel"
     enforcement_level = "advisory"
 }
     
-policy "enforce-mandatory-labels" {
+policy "iam_gcp_policy_restrictions" {
     source = "./iam_gcp_policy_restrictions.sentinel"
     enforcement_level = "advisory"
 }
     
-policy "enforce-mandatory-labels" {
+policy "network_gcp_ssl_enforce" {
     source = "./network_gcp_ssl_enforce.sentinel"
     enforcement_level = "advisory"
 }
     
     
-policy "enforce-mandatory-labels" {
+policy "assetmgmt_gcp_naming_validation" {
     source = "./assetmgmt_gcp_naming_validation.sentinel"
     enforcement_level = "advisory"
 }  
     
     
-policy "enforce-mandatory-labels" {
+policy "network_gcp_ip_restriction" {
     source = "./network_gcp_ip_restriction.sentinel"
     enforcement_level = "advisory"
 }
     
-policy "enforce-mandatory-labels" {
+policy "threat_gcp_data_configuration_restriction" {
     source = "./threat_gcp_data_configuration_restriction.sentinel"
     enforcement_level = "advisory"
 }
     
-policy "enforce-mandatory-labels" {
+policy "assetmgmt_gcp_resiliency_validation" {
     source = "./assetmgmt_gcp_resiliency_validation.sentinel"
     enforcement_level = "advisory"
 }
     
-policy "enforce-mandatory-labels" {
+policy "network_gcp_mtu_restriction" {
     source = "./network_gcp_mtu_restriction.sentinel"
     enforcement_level = "advisory"
 }
     
     
-policy "enforce-mandatory-labels" {
+policy "threat_gcp_unapproved_service_validation" {
     source = "./threat_gcp_unapproved_service_validation.sentinel"
     enforcement_level = "advisory"
 }        
