@@ -24,17 +24,17 @@ policy "network_gcp_port_restriction" {
     enforcement_level = "advisory"
 }
     
-policy "encryption_gcp_cmek_enforce" {
+policy "storage_gcp_versioning_enforce" {
     source = "./storage_gcp_versioning_enforce.sentinel"
     enforcement_level = "advisory"
 }
     
-policy "enforce-mandatory-labels" {
+policy "encryption_gcp_cmek_enforce" {
     source = "./encryption_gcp_cmek_enforce.sentinel"
     enforcement_level = "advisory"
 }
     
-policy "enforce-mandatory-labels" {
+policy "network_gcp_region_restricition" {
     source = "./network_gcp_region_restricition.sentinel"
     enforcement_level = "advisory"
 }
