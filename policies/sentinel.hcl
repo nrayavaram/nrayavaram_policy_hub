@@ -13,11 +13,11 @@ module "tfconfig-functions" {
 module "generic-functions" {
     source = "../common-functions/generic-functions/generic-functions.sentinel"
 }
-
-policy "enforce-mandatory-labels" {
-    source = "./enforce-mandatory-labels.sentinel"
-    enforcement_level = "advisory"
-}
+    
+#policy "enforce-mandatory-labels" {
+#    source = "./enforce-mandatory-labels.sentinel"
+#    enforcement_level = "advisory"
+#}
     
 policy "network_gcp_port_restriction" {
     source = "./network_gcp_port_restriction.sentinel"
