@@ -105,3 +105,4 @@ for msgs as k, v {
 GCP_RES_CMEK = rule { length(msgs) is 0 }
 
 main = rule { GCP_RES_CMEK }
+
