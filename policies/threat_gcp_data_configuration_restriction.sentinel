@@ -137,6 +137,7 @@ GCP_DLP_SAVEFINDINGS = rule {
 	length(messages_save_findings) is 0
 }
 
+
 # Main rule
 print(messages)
 
