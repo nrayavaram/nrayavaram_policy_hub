@@ -22,3 +22,4 @@ GCP_LB_HC = rule { length(messages) is 0 }
 
 main = rule { GCP_LB_HC }
 
+
