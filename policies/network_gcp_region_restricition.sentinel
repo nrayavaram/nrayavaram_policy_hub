@@ -140,3 +140,4 @@ GCP_RES_LOCATION = rule { length(msgs) is 0 }
 # Main rule
 main = rule { GCP_RES_LOCATION }
 
+
