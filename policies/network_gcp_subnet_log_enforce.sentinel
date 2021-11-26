@@ -88,3 +88,4 @@ GCP_VPC_LOGS = rule { GCP_VPC_LOGS1 and GCP_VPC_LOGS2 }
 print(messages)
 
 main = rule { GCP_VPC_LOGS }
+
