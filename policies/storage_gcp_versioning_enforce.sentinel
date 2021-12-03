@@ -31,5 +31,3 @@ GCP_GCS_VERSIONING = rule { length(violations) is 0 }
 
 # Main rule
 main = rule { GCP_GCS_VERSIONING }
-
-

@@ -101,6 +101,3 @@ GCP_RES_LABELS = rule { length(violators) is 0 and AllLabelsExist }
 main = rule {
 	GCP_RES_LABELS
 }
-
-
-

@@ -91,5 +91,3 @@ GCP_VPC_NOWAN = rule {
 print(messages)
 
 main = rule { GCP_VPC_NODEFAULT and GCP_VPC_NOWAN }
-
-

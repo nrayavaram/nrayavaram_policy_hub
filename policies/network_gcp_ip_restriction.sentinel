@@ -67,6 +67,3 @@ GCP_INTERNAL_IP = rule {
 print(messages)
 
 main = rule { GCP_INTERNAL_IP }
-
-
-

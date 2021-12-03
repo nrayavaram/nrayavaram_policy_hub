@@ -67,6 +67,3 @@ GCP_SSL_ENFORCE = rule {
 print(messages)
 
 main = rule { GCP_SSL_ENFORCE }
-
-
-

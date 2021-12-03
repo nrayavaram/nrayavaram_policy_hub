@@ -125,6 +125,3 @@ GCP_IAM_CUSTOM = rule { length(violatingResources["messages"]) is 0 }
 
 # Main rule
 main = rule { GCP_IAM_ENTITY and GCP_IAM_CUSTOM }
-
-
-
