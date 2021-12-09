@@ -32,11 +32,11 @@ planned_values = {
 							{
 								"internal_ip_only": false,
 								"metadata":         null,
-								"service_account":  "demo-sentinel-sa@airline1-sabre-wolverine.iam.gserviceaccount.com",
+								"service_account":  "demo-sentinel-sa@test-project.iam.gserviceaccount.com",
 								"service_account_scopes": [
 									"https://www.googleapis.com/auth/cloud-platform",
 								],
-								"subnetwork": "projects/airline1-sabre-wolverine/regions/us-east1/subnetworks/savita-subnet-vpc-2",
+								"subnetwork": "projects/test-project/regions/us-east1/subnetworks/savita-subnet-vpc-2",
 								"tags": [
 									"bar",
 									"foo",
@@ -90,7 +90,7 @@ planned_values = {
 					"owner":                "wf",
 				},
 				"name":     "cluster-wsae",
-				"project":  "airline1-sabre-wolverine",
+				"project":  "test-project",
 				"region":   "us-east1",
 				"timeouts": null,
 			},
@@ -127,7 +127,7 @@ planned_values = {
 								"service_account_scopes": [
 									"https://www.googleapis.com/auth/cloud-platform",
 								],
-								"subnetwork": "projects/airline1-sabre-wolverine/regions/us-central1/subnetworks/savita-subnet-vpc1",
+								"subnetwork": "projects/test-project/regions/us-central1/subnetworks/savita-subnet-vpc1",
 								"tags": [
 									"bar",
 									"foo",
@@ -181,7 +181,7 @@ planned_values = {
 					"owner":                "wf",
 				},
 				"name":     "cluster-wsar",
-				"project":  "airline1-sabre-wolverine",
+				"project":  "test-project",
 				"region":   "us-central1",
 				"timeouts": null,
 			},
@@ -199,7 +199,7 @@ planned_values = {
 			"type":           "google_project_iam_member",
 			"values": {
 				"condition": [],
-				"project":   "airline1-sabre-wolverine",
+				"project":   "test-project",
 				"role":      "roles/dataproc.worker",
 			},
 		},
@@ -219,7 +219,7 @@ planned_values = {
 				"description":  null,
 				"disabled":     false,
 				"display_name": "Service Account",
-				"project":      "airline1-sabre-wolverine",
+				"project":      "test-project",
 				"timeouts":     null,
 			},
 		},
@@ -258,11 +258,11 @@ resource_changes = {
 							{
 								"internal_ip_only": false,
 								"metadata":         null,
-								"service_account":  "demo-sentinel-sa@airline1-sabre-wolverine.iam.gserviceaccount.com",
+								"service_account":  "demo-sentinel-sa@test-project.iam.gserviceaccount.com",
 								"service_account_scopes": [
 									"https://www.googleapis.com/auth/cloud-platform",
 								],
-								"subnetwork": "projects/airline1-sabre-wolverine/regions/us-east1/subnetworks/savita-subnet-vpc-2",
+								"subnetwork": "projects/test-project/regions/us-east1/subnetworks/savita-subnet-vpc-2",
 								"tags": [
 									"bar",
 									"foo",
@@ -316,7 +316,7 @@ resource_changes = {
 					"owner":                "wf",
 				},
 				"name":     "cluster-wsae",
-				"project":  "airline1-sabre-wolverine",
+				"project":  "test-project",
 				"region":   "us-east1",
 				"timeouts": null,
 			},
@@ -424,7 +424,7 @@ resource_changes = {
 								"service_account_scopes": [
 									"https://www.googleapis.com/auth/cloud-platform",
 								],
-								"subnetwork": "projects/airline1-sabre-wolverine/regions/us-central1/subnetworks/savita-subnet-vpc1",
+								"subnetwork": "projects/test-project/regions/us-central1/subnetworks/savita-subnet-vpc1",
 								"tags": [
 									"bar",
 									"foo",
@@ -478,7 +478,7 @@ resource_changes = {
 					"owner":                "wf",
 				},
 				"name":     "cluster-wsar",
-				"project":  "airline1-sabre-wolverine",
+				"project":  "test-project",
 				"region":   "us-central1",
 				"timeouts": null,
 			},
@@ -568,7 +568,7 @@ resource_changes = {
 			],
 			"after": {
 				"condition": [],
-				"project":   "airline1-sabre-wolverine",
+				"project":   "test-project",
 				"role":      "roles/dataproc.worker",
 			},
 			"after_unknown": {
@@ -598,7 +598,7 @@ resource_changes = {
 				"description":  null,
 				"disabled":     false,
 				"display_name": "Service Account",
-				"project":      "airline1-sabre-wolverine",
+				"project":      "test-project",
 				"timeouts":     null,
 			},
 			"after_unknown": {
@@ -669,7 +669,7 @@ raw = {
 								"gce_cluster_config": [
 									{
 										"service_account": {
-											"constant_value": "demo-sentinel-sa@airline1-sabre-wolverine.iam.gserviceaccount.com",
+											"constant_value": "demo-sentinel-sa@test-project.iam.gserviceaccount.com",
 										},
 										"service_account_scopes": {
 											"constant_value": [
@@ -677,7 +677,7 @@ raw = {
 											],
 										},
 										"subnetwork": {
-											"constant_value": "projects/airline1-sabre-wolverine/regions/us-east1/subnetworks/savita-subnet-vpc-2",
+											"constant_value": "projects/test-project/regions/us-east1/subnetworks/savita-subnet-vpc-2",
 										},
 										"tags": {
 											"constant_value": [
@@ -750,7 +750,7 @@ raw = {
 							"constant_value": "cluster-wsae",
 						},
 						"project": {
-							"constant_value": "airline1-sabre-wolverine",
+							"constant_value": "test-project",
 						},
 						"region": {
 							"constant_value": "us-east1",
@@ -799,7 +799,7 @@ raw = {
 											],
 										},
 										"subnetwork": {
-											"constant_value": "projects/airline1-sabre-wolverine/regions/us-central1/subnetworks/savita-subnet-vpc1",
+											"constant_value": "projects/test-project/regions/us-central1/subnetworks/savita-subnet-vpc1",
 										},
 										"tags": {
 											"constant_value": [
@@ -872,7 +872,7 @@ raw = {
 							"constant_value": "cluster-wsar",
 						},
 						"project": {
-							"constant_value": "airline1-sabre-wolverine",
+							"constant_value": "test-project",
 						},
 						"region": {
 							"constant_value": "us-central1",
@@ -894,7 +894,7 @@ raw = {
 							],
 						},
 						"project": {
-							"constant_value": "airline1-sabre-wolverine",
+							"constant_value": "test-project",
 						},
 						"role": {
 							"constant_value": "roles/dataproc.worker",
@@ -916,7 +916,7 @@ raw = {
 							"constant_value": "Service Account",
 						},
 						"project": {
-							"constant_value": "airline1-sabre-wolverine",
+							"constant_value": "test-project",
 						},
 					},
 					"mode":                "managed",
@@ -1021,11 +1021,11 @@ raw = {
 									{
 										"internal_ip_only": false,
 										"metadata":         null,
-										"service_account":  "demo-sentinel-sa@airline1-sabre-wolverine.iam.gserviceaccount.com",
+										"service_account":  "demo-sentinel-sa@test-project.iam.gserviceaccount.com",
 										"service_account_scopes": [
 											"https://www.googleapis.com/auth/cloud-platform",
 										],
-										"subnetwork": "projects/airline1-sabre-wolverine/regions/us-east1/subnetworks/savita-subnet-vpc-2",
+										"subnetwork": "projects/test-project/regions/us-east1/subnetworks/savita-subnet-vpc-2",
 										"tags": [
 											"bar",
 											"foo",
@@ -1079,7 +1079,7 @@ raw = {
 							"owner":                "wf",
 						},
 						"name":     "cluster-wsae",
-						"project":  "airline1-sabre-wolverine",
+						"project":  "test-project",
 						"region":   "us-east1",
 						"timeouts": null,
 					},
@@ -1170,7 +1170,7 @@ raw = {
 										"service_account_scopes": [
 											"https://www.googleapis.com/auth/cloud-platform",
 										],
-										"subnetwork": "projects/airline1-sabre-wolverine/regions/us-central1/subnetworks/savita-subnet-vpc1",
+										"subnetwork": "projects/test-project/regions/us-central1/subnetworks/savita-subnet-vpc1",
 										"tags": [
 											"bar",
 											"foo",
@@ -1224,7 +1224,7 @@ raw = {
 							"owner":                "wf",
 						},
 						"name":     "cluster-wsar",
-						"project":  "airline1-sabre-wolverine",
+						"project":  "test-project",
 						"region":   "us-central1",
 						"timeouts": null,
 					},
@@ -1241,7 +1241,7 @@ raw = {
 					"type": "google_project_iam_member",
 					"values": {
 						"condition": [],
-						"project":   "airline1-sabre-wolverine",
+						"project":   "test-project",
 						"role":      "roles/dataproc.worker",
 					},
 				},
@@ -1258,7 +1258,7 @@ raw = {
 						"description":  null,
 						"disabled":     false,
 						"display_name": "Service Account",
-						"project":      "airline1-sabre-wolverine",
+						"project":      "test-project",
 						"timeouts":     null,
 					},
 				},
@@ -1290,11 +1290,11 @@ raw = {
 								{
 									"internal_ip_only": false,
 									"metadata":         null,
-									"service_account":  "demo-sentinel-sa@airline1-sabre-wolverine.iam.gserviceaccount.com",
+									"service_account":  "demo-sentinel-sa@test-project.iam.gserviceaccount.com",
 									"service_account_scopes": [
 										"https://www.googleapis.com/auth/cloud-platform",
 									],
-									"subnetwork": "projects/airline1-sabre-wolverine/regions/us-east1/subnetworks/savita-subnet-vpc-2",
+									"subnetwork": "projects/test-project/regions/us-east1/subnetworks/savita-subnet-vpc-2",
 									"tags": [
 										"bar",
 										"foo",
@@ -1348,7 +1348,7 @@ raw = {
 						"owner":                "wf",
 					},
 					"name":     "cluster-wsae",
-					"project":  "airline1-sabre-wolverine",
+					"project":  "test-project",
 					"region":   "us-east1",
 					"timeouts": null,
 				},
@@ -1512,7 +1512,7 @@ raw = {
 									"service_account_scopes": [
 										"https://www.googleapis.com/auth/cloud-platform",
 									],
-									"subnetwork": "projects/airline1-sabre-wolverine/regions/us-central1/subnetworks/savita-subnet-vpc1",
+									"subnetwork": "projects/test-project/regions/us-central1/subnetworks/savita-subnet-vpc1",
 									"tags": [
 										"bar",
 										"foo",
@@ -1566,7 +1566,7 @@ raw = {
 						"owner":                "wf",
 					},
 					"name":     "cluster-wsar",
-					"project":  "airline1-sabre-wolverine",
+					"project":  "test-project",
 					"region":   "us-central1",
 					"timeouts": null,
 				},
@@ -1712,7 +1712,7 @@ raw = {
 				],
 				"after": {
 					"condition": [],
-					"project":   "airline1-sabre-wolverine",
+					"project":   "test-project",
 					"role":      "roles/dataproc.worker",
 				},
 				"after_sensitive": {
@@ -1743,7 +1743,7 @@ raw = {
 					"description":  null,
 					"disabled":     false,
 					"display_name": "Service Account",
-					"project":      "airline1-sabre-wolverine",
+					"project":      "test-project",
 					"timeouts":     null,
 				},
 				"after_sensitive": {},

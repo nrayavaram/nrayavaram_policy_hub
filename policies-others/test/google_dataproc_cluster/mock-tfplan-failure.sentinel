@@ -33,7 +33,7 @@ planned_values = {
 								"internal_ip_only": false,
 								"metadata":         null,
 								"service_account":  null,
-								"subnetwork":       "projects/airline1-sabre-wolverine/regions/us-east4/subnetworks/savita-subnet-vpc3",
+								"subnetwork":       "projects/test-project/regions/us-east4/subnetworks/savita-subnet-vpc3",
 								"tags": [
 									"bar",
 									"foo",
@@ -87,7 +87,7 @@ planned_values = {
 					"owner":                "wf",
 				},
 				"name":     "cluster-null-wsan",
-				"project":  "airline1-sabre-wolverine",
+				"project":  "test-project",
 				"region":   "us-east4",
 				"timeouts": null,
 			},
@@ -122,7 +122,7 @@ planned_values = {
 								"internal_ip_only": false,
 								"metadata":         null,
 								"service_account":  "demo-sentinel-compute@developer.gserviceaccount.com",
-								"subnetwork":       "projects/airline1-sabre-wolverine/regions/us-east1/subnetworks/savita-subnet-vpc-2",
+								"subnetwork":       "projects/test-project/regions/us-east1/subnetworks/savita-subnet-vpc-2",
 								"tags": [
 									"bar",
 									"foo",
@@ -176,7 +176,7 @@ planned_values = {
 					"owner":                "wf",
 				},
 				"name":     "cluster-wsae",
-				"project":  "airline1-sabre-wolverine",
+				"project":  "test-project",
 				"region":   "us-east1",
 				"timeouts": null,
 			},
@@ -217,7 +217,7 @@ resource_changes = {
 								"internal_ip_only": false,
 								"metadata":         null,
 								"service_account":  null,
-								"subnetwork":       "projects/airline1-sabre-wolverine/regions/us-east4/subnetworks/savita-subnet-vpc3",
+								"subnetwork":       "projects/test-project/regions/us-east4/subnetworks/savita-subnet-vpc3",
 								"tags": [
 									"bar",
 									"foo",
@@ -271,7 +271,7 @@ resource_changes = {
 					"owner":                "wf",
 				},
 				"name":     "cluster-null-wsan",
-				"project":  "airline1-sabre-wolverine",
+				"project":  "test-project",
 				"region":   "us-east4",
 				"timeouts": null,
 			},
@@ -375,7 +375,7 @@ resource_changes = {
 								"internal_ip_only": false,
 								"metadata":         null,
 								"service_account":  "demo-sentinel-compute@developer.gserviceaccount.com",
-								"subnetwork":       "projects/airline1-sabre-wolverine/regions/us-east1/subnetworks/savita-subnet-vpc-2",
+								"subnetwork":       "projects/test-project/regions/us-east1/subnetworks/savita-subnet-vpc-2",
 								"tags": [
 									"bar",
 									"foo",
@@ -429,7 +429,7 @@ resource_changes = {
 					"owner":                "wf",
 				},
 				"name":     "cluster-wsae",
-				"project":  "airline1-sabre-wolverine",
+				"project":  "test-project",
 				"region":   "us-east1",
 				"timeouts": null,
 			},
@@ -564,7 +564,7 @@ raw = {
 										},
 										"service_account": {},
 										"subnetwork": {
-											"constant_value": "projects/airline1-sabre-wolverine/regions/us-east4/subnetworks/savita-subnet-vpc3",
+											"constant_value": "projects/test-project/regions/us-east4/subnetworks/savita-subnet-vpc3",
 										},
 										"tags": {
 											"constant_value": [
@@ -637,7 +637,7 @@ raw = {
 							"constant_value": "cluster-null-wsan",
 						},
 						"project": {
-							"constant_value": "airline1-sabre-wolverine",
+							"constant_value": "test-project",
 						},
 						"region": {
 							"constant_value": "us-east4",
@@ -677,7 +677,7 @@ raw = {
 											"constant_value": "demo-sentinel-compute@developer.gserviceaccount.com",
 										},
 										"subnetwork": {
-											"constant_value": "projects/airline1-sabre-wolverine/regions/us-east1/subnetworks/savita-subnet-vpc-2",
+											"constant_value": "projects/test-project/regions/us-east1/subnetworks/savita-subnet-vpc-2",
 										},
 										"tags": {
 											"constant_value": [
@@ -750,7 +750,7 @@ raw = {
 							"constant_value": "cluster-wsae",
 						},
 						"project": {
-							"constant_value": "airline1-sabre-wolverine",
+							"constant_value": "test-project",
 						},
 						"region": {
 							"constant_value": "us-east1",
@@ -857,7 +857,7 @@ raw = {
 										"internal_ip_only": false,
 										"metadata":         null,
 										"service_account":  null,
-										"subnetwork":       "projects/airline1-sabre-wolverine/regions/us-east4/subnetworks/savita-subnet-vpc3",
+										"subnetwork":       "projects/test-project/regions/us-east4/subnetworks/savita-subnet-vpc3",
 										"tags": [
 											"bar",
 											"foo",
@@ -911,7 +911,7 @@ raw = {
 							"owner":                "wf",
 						},
 						"name":     "cluster-null-wsan",
-						"project":  "airline1-sabre-wolverine",
+						"project":  "test-project",
 						"region":   "us-east4",
 						"timeouts": null,
 					},
@@ -998,7 +998,7 @@ raw = {
 										"internal_ip_only": false,
 										"metadata":         null,
 										"service_account":  "demo-sentinel-compute@developer.gserviceaccount.com",
-										"subnetwork":       "projects/airline1-sabre-wolverine/regions/us-east1/subnetworks/savita-subnet-vpc-2",
+										"subnetwork":       "projects/test-project/regions/us-east1/subnetworks/savita-subnet-vpc-2",
 										"tags": [
 											"bar",
 											"foo",
@@ -1052,7 +1052,7 @@ raw = {
 							"owner":                "wf",
 						},
 						"name":     "cluster-wsae",
-						"project":  "airline1-sabre-wolverine",
+						"project":  "test-project",
 						"region":   "us-east1",
 						"timeouts": null,
 					},
@@ -1086,7 +1086,7 @@ raw = {
 									"internal_ip_only": false,
 									"metadata":         null,
 									"service_account":  null,
-									"subnetwork":       "projects/airline1-sabre-wolverine/regions/us-east4/subnetworks/savita-subnet-vpc3",
+									"subnetwork":       "projects/test-project/regions/us-east4/subnetworks/savita-subnet-vpc3",
 									"tags": [
 										"bar",
 										"foo",
@@ -1140,7 +1140,7 @@ raw = {
 						"owner":                "wf",
 					},
 					"name":     "cluster-null-wsan",
-					"project":  "airline1-sabre-wolverine",
+					"project":  "test-project",
 					"region":   "us-east4",
 					"timeouts": null,
 				},
@@ -1298,7 +1298,7 @@ raw = {
 									"internal_ip_only": false,
 									"metadata":         null,
 									"service_account":  "demo-sentinel-compute@developer.gserviceaccount.com",
-									"subnetwork":       "projects/airline1-sabre-wolverine/regions/us-east1/subnetworks/savita-subnet-vpc-2",
+									"subnetwork":       "projects/test-project/regions/us-east1/subnetworks/savita-subnet-vpc-2",
 									"tags": [
 										"bar",
 										"foo",
@@ -1352,7 +1352,7 @@ raw = {
 						"owner":                "wf",
 					},
 					"name":     "cluster-wsae",
-					"project":  "airline1-sabre-wolverine",
+					"project":  "test-project",
 					"region":   "us-east1",
 					"timeouts": null,
 				},
