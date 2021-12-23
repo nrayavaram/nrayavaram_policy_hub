@@ -1,4 +1,4 @@
-# This sentinel policies enforce usage of Resource Naming [scope]-[env]-[appid]-[system]-[name]-[resourcetype]
+# This sentinel policies enforce usage of Resource Naming [org]_[country]_[env]_*_[appid]_[uid]
 # These sentinel policies enforce Wells Fargo security principles
 
 # Import common-functions/tfplan-functions/tfplan-functions.sentinel
@@ -92,12 +92,72 @@ resourceTypesNameMap = {
 	"google_compute_forwarding_rule": {
 		"name_param":     "name",
 		"name_substring": "lb",
-	},
+	}, #need to change name_prefix
 	"google_compute_region_ssl_certificate": {
 		"name_param":     "name",
 		"name_substring": "ssl",
 	},
 	"google_compute_region_target_https_proxy": {
+		"name_param":     "name",
+		"name_substring": "lb",
+	},
+	"google_container_cluster": {
+		"name_param":     "name",
+		"name_substring": "gke",
+	},
+	"google_container_node_pool": {
+		"name_param":     "name",
+		"name_substring": "gke",
+	},
+	"google_cloudfunctions_function": {
+		"name_param":     "name",
+		"name_substring": "cf",
+	},
+	"google_logging_project_sink": {
+		"name_param":     "name",
+		"name_substring": "log",
+	},
+	"google_pubsub_subscription": {
+		"name_param":     "name",
+		"name_substring": "ps",
+	},
+	"google_scc_notification_config": {
+		"name_param":     "name",
+		"name_substring": "scc",
+	},
+	"google_dns_managed_zone": {
+		"name_param":     "name",
+		"name_substring": "dns",
+	},
+	"google_dns_policy": {
+		"name_param":     "name",
+		"name_substring": "dnsp",
+	},
+	"google_compute_firewall_policy": {
+		"name_param":     "short_name",
+		"name_substring": "fw",
+	},
+	"google_compute_firewall_policy_association": {
+		"name_param":     "name",
+		"name_substring": "fw",
+	},
+	"google_kms_key_ring_import_job": {
+		"name_param":     "import_job_id",
+		"name_substring": "kms",
+	},
+	"google_filestore_instance": {
+		"name_param":     "name",
+		"name_substring": "fs",
+	},
+	"google_compute_region_backend_service": {
+		"name_param":     "name",
+		"name_substring": "lb",
+	},
+	"google_compute_region_url_map": {
+		"name_param":     "name",
+		"name_substring": "lb",
+	},
+	"google_compute_region_health_check": {
 		"name_param":     "name",
 		"name_substring": "lb",
 	},
@@ -145,6 +205,14 @@ check_application_id = func(name) {
 	}
 }
 
+check_uid = func(name) {
+	if length(name) >= 2 and length(name) <= 10 {
+		return true
+	} else {
+		return false
+	}
+}
+
 # check_system = func(name) {
 #  if length(name) >= 4 and length(name) <= 6 {
 #   return true
@@ -158,12 +226,13 @@ check_resource_prefix = func(name, resource_name_substring, org_param, country_p
 	result_map = {}
 	result_map["status"] = true
 	result_map["message"] = []
-	if length(resource_name_arr) > 4 {
+	if length(resource_name_arr) > 5 {
 		org = resource_name_arr[0]
 		country = resource_name_arr[1]
 		environment = resource_name_arr[2]
 		name_substring = resource_name_arr[3]
 		application_id = resource_name_arr[4]
+		uid = resource_name_arr[5]
 		# if not check_scope(scope) {
 		#  result_map["status"] = false
 		#  append(result_map["message"], "Value of scope  is " + scope + " which is not allowed")
@@ -187,6 +256,11 @@ check_resource_prefix = func(name, resource_name_substring, org_param, country_p
 		if not check_application_id(application_id) {
 			result_map["status"] = false
 			append(result_map["message"], "Value of application_id  is " + application_id + " which is not allowed")
+		}
+
+		if not check_uid(uid) {
+			result_map["status"] = false
+			append(result_map["message"], "Value of uid  is " + uid + " which is not allowed")
 		}
 		# if not check_system(system) {
 		#  result_map["status"] = false

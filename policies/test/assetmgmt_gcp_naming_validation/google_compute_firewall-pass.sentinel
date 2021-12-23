@@ -154,7 +154,7 @@ resource_changes = {
 						"metadata": "INCLUDE_ALL_METADATA",
 					},
 				],
-				"name":     "wf-us-dev-fw-strg-demo9-gcsfwrull",
+				"name":     "wf-us-dev-fw-strg-demo9-g",
 				"network":  "te-dev-vpce-syst-testvpc",
 				"priority": 1000,
 				"project":  "REDACTED_SENSITIVE",

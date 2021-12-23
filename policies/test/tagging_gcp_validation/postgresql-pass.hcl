@@ -4,7 +4,7 @@ module "tfplan-functions" {
 
 mock "tfplan/v2" {
   module {
-    source = "mock-tfplan-google_bigquery_dataset-pass.sentinel"
+    source = "mock-tfplan-postgresql-pass.sentinel"
   }
 }
 
@@ -15,7 +15,7 @@ test {
 }
 
 param "gcp_region" {
-  value = [ "us" ]
+  value = ["us"]
 }
 
 param "owner" {

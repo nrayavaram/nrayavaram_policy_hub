@@ -28,20 +28,22 @@ mandatory_labels = {
 }
 
 # Resource Types to check labels
-resourceTypes = [
-	"google_pubsub_topic",
-	"google_secret_manager_secret",
-	"google_dataproc_cluster",
-	"google_kms_crypto_key",
-	"google_bigquery_dataset",
-	"google_compute_forwarding_rule",
-	"google_storage_bucket",
-	"google_spanner_instance",
-]
+resourceTypes = {
+	"google_pubsub_topic":            "labels",
+	"google_secret_manager_secret":   "labels",
+	"google_dataproc_cluster":        "labels",
+	"google_kms_crypto_key":          "labels",
+	"google_bigquery_dataset":        "labels",
+	"google_compute_forwarding_rule": "labels",
+	"google_storage_bucket":          "labels",
+	"google_spanner_instance":        "labels",
+	"google_sql_database_instance":   "settings.0.user_labels",
+}
 
 # Function to Check if Labels Values are allowed
 check_label_value = func(rc, label_key, label_value) {
-	rc_label_value = plan.evaluate_attribute(rc, "labels." + label_key)
+	label_key_prefix = resourceTypes[rc["type"]]
+	rc_label_value = plan.evaluate_attribute(rc, label_key_prefix + "." + label_key)
 	if label_value not contains rc_label_value {
 		return false
 	} else {
@@ -51,21 +53,51 @@ check_label_value = func(rc, label_key, label_value) {
 
 # Fetch all resources based on resourceTypes
 allResources = {}
-for resourceTypes as rt {
+for resourceTypes as rt, _ {
 	resources = plan.find_resources(rt)
 	for resources as address, rc {
 		allResources[address] = rc
 	}
 }
 
+allResourcesArray = {}
+for allResources as address, rc {
+	type = rc["type"]
+
+	lkey = resourceTypes[type]
+	if lkey in keys(allResourcesArray) {
+		allResourcesArray[lkey][address] = rc
+	} else {
+		allResourcesArray[lkey] = {}
+		allResourcesArray[lkey][address] = rc
+	}
+}
+
+# print(allResourcesArray)
+
+violatingResources = []
+
 # Fetch all resources which dont have mandatory_labels
-violatingResources = plan.filter_attribute_not_contains_list(allResources,
-	"labels", keys(mandatory_labels), true)
+for allResourcesArray as lkey, resources {
+	rcs = plan.filter_attribute_not_contains_list(resources,
+		lkey, keys(mandatory_labels), true)
+	if length(rcs) > 0 {
+		append(violatingResources, rcs)
+	}
+}
+
+print(violatingResources)
+
+AllLabels = true
+
+for violatingResources as vr {
+	if length(vr["messages"]) > 0 {
+		AllLabels = false
+	}
+}
 
 # Rule to evaluate mandatory_labels
-AllLabelsExist = rule {
-	length(violatingResources["messages"]) is 0
-}
+AllLabelsExist = rule { AllLabels }
 
 # Declare  violators  & messages Map
 violators = {}

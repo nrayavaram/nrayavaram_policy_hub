@@ -4,13 +4,13 @@ module "tfplan-functions" {
 
 mock "tfplan/v2" {
   module {
-    source = "mock-tfplan-google_bigquery_dataset-pass.sentinel"
+    source = "mock-tfplan-postgresql-null.sentinel"
   }
 }
 
 test {
   rules = {
-    main = true
+    main = false
   }
 }
 
